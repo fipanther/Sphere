@@ -29,7 +29,7 @@ def P_ani(phi, theta, alpha):
         meshgrid of probabilities that a source occurs in given direction
 """
     norm_const = 1/(4*np.pi*(1+alpha**2))
-    b = 1+(alpha*2*np.sqrt(3))+(3*alpha**2*(np.cos(theta)**2))
+    b = 1+(alpha*2*np.sqrt(3)*np.cos(theta))+(3*alpha**2*(np.cos(theta)**2))
     return norm_const*b
 
 def gen_custom_sample_sphere(n_samples, alpha, savetofile = False, fname = 'none'):
